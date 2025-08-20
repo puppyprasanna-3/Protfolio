@@ -1,0 +1,136 @@
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Arial,sans-serif;background:#fff;color:#fff;line-height:1.6;scroll-behavior:smooth;}
+header{background:transparent;box-shadow:0 2px 6px rgba(0,0,0,0.1);padding:15px 40px;position:fixed;width:100%;top:0;z-index:100;}
+nav{display:flex;align-items:center;justify-content:space-between;}
+nav ul{list-style:none;display:flex;gap:25px;}
+nav ul li a{color:#fff;text-decoration:none;font-weight:500;transition:0.3s;}
+nav ul li a:hover{color:#00bcd4;}
+.logo{color:#00bcd4;font-weight:bold;font-size:22px;}
+section{padding:80px 60px;display:flex;align-items:center;justify-content:center;gap:50px;flex-wrap:wrap;opacity:0;transform:translateY(50px);transition:all 0.8s ease-out;}
+section.show{opacity:1;transform:translateY(0);}
+
+/* Hero */
+.hero{min-height:100vh;background:transparent;}
+.hero-text{max-width:600px;}
+.hero h1{font-size:40px;}
+.hero .typing{color:#00bcd4;font-weight:bold;}
+.neon-ring{border:5px solid #00bcd4;border-radius:50%;padding:10px;box-shadow:0 0 15px rgba(0,188,212,0.4);}
+.neon-ring img{border-radius:50%;width:260px;height:260px;object-fit:cover;display:block;}
+
+/* About */
+#about{gap:30px;text-align:left;background:transparent;}
+.about-text{max-width:700px;}
+
+/* Services */
+#services{flex-direction:column;background:transparent;}
+.services-wrap{display:flex;gap:30px;flex-wrap:wrap;justify-content:center;}
+.service-card{background:#fff;padding:20px;border-radius:10px;width:280px;text-align:center;
+              box-shadow:0 4px 8px rgba(0,0,0,0.1);transition:0.3s;}
+.service-card:hover{transform:translateY(-5px);}
+.service-card i{font-size:40px;margin-bottom:10px;color:#00bcd4;}
+.service-card h3{margin:10px 0;color:#333;}
+.service-card p{color:#555;}
+
+/* Skills */
+#skills{flex-direction:column;background:transparent;}
+.skills-wrap{display:flex;gap:60px;flex-wrap:wrap;justify-content:center;}
+.skill-bar{margin:12px 0;}
+.skill-bar span{float:right;}
+.bar{background:#eee;height:10px;border-radius:5px;overflow:hidden;}
+.fill{height:10px;background:#00bcd4;width:0;transition:2s;}
+
+/* Projects */
+#projects{background:transparent;flex-direction:column;}
+.projects-wrap{display:flex;gap:25px;flex-wrap:wrap;justify-content:center;}
+.project-card{background:#fff;border-radius:10px;overflow:hidden;width:260px;box-shadow:0 4px 8px rgba(0,0,0,0.1);}
+.project-card img{width:100%;height:150px;object-fit:cover;}
+.project-card h3{margin:10px;color:#333;}
+.project-card p{padding:0 10px 15px;color:#555;}
+
+/* Contact */
+#contact{align-items:flex-start;gap:40px;background:transparent;}
+.contact-info{max-width:300px;}
+.contact-info h2{color:#00bcd4;}
+form{display:flex;flex-direction:column;gap:12px;flex:1;min-width:280px;}
+input,textarea{padding:10px;border:1px solid #ccc;border-radius:5px;}
+button{padding:12px;border:none;background:#00bcd4;color:#fff;border-radius:5px;cursor:pointer;font-weight:bold;}
+button:hover{background:#0097a7;}
+.social-icons a{margin-right:10px;font-size:20px;color:#00bcd4;transition:0.3s;}
+.social-icons a:hover{color:#0097a7;}
+/* Particle background covers whole page */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* stays behind all sections */
+  background: #0d0d0d; /* fallback dark background */
+}
+section, header, footer {
+  position: relative;
+  z-index: 1;
+}
+/* Make header fixed */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* ensures it stays above particles and content */
+  background: transparent; /* slightly transparent background */
+  backdrop-filter: blur(6px); /* optional: glass effect */
+  box-shadow: 0 2px 5px rgba(231, 33, 33, 0.1); /* subtle shadow */
+}
+
+/* Push content down so it doesn’t hide behind header */
+body {
+  padding-top: 80px; /* adjust based on your header’s height */
+}
+/* General layout container */
+section {
+  max-width: 1200px;   /* keeps content centered */
+  margin: 0 auto;      /* centers horizontally */
+  padding: 60px 70px;  /* top/bottom = 60px, left/right = 40px */
+}
+
+/* Adjust header content too */
+header {
+  padding: 20px 60px;  /* more spacing on left/right */
+}
+/* Let's Get in Touch Section */
+.get-in-touch {
+  text-align: center;
+  margin: 80px auto 40px;
+  max-width: 800px;
+}
+
+.get-in-touch h2 {
+  font-size: 2.5rem;
+  color: #fff;  /* blue heading */
+  margin-bottom: 15px;
+}
+
+.get-in-touch p {
+  font-size: 1.2rem;
+  color:#fff;
+}
+.project-card {
+  text-align: center;  /* centers content inside each card */
+  padding: 20px;
+}
+
+.project-card a.learn-more {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.project-card a.learn-more:hover {
+  background: #0056b3;
+}
